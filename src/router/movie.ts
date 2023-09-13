@@ -1,8 +1,7 @@
 import { Router } from "express";
+import { MovieController } from "../movies/controllers/movie.controller";
 
 const router = Router()
-router.get('/', (req, res) =>{
-    res.status(200).json({message: 'todos lo movies'})
-})
+router.get('/', MovieController.getAll)
 
 export { router }
